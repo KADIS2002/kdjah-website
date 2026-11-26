@@ -4,9 +4,10 @@ import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useMotionValue, useSpring } from "framer-motion";
 import { ArrowDown, ArrowDownRight, ArrowUpRight, Instagram, Mail, Menu, MoveUpRight, X } from "lucide-react";
 import { BrandImage } from "./brand-image";
+import SparkMonogram from "../../components/SparkMonogram";
 
 const email = "khadijahpk2002@gmail.com";
-const instagram = "https://www.instagram.com/kdja.vision/";
+const instagram = "https://www.instagram.com/kdjah.vision/";
 
 export function Loader() {
   const [show, setShow] = useState(false);
@@ -64,8 +65,7 @@ export function Hero() {
   };
   return <section ref={ref} className="hero" id="top" onMouseMove={onMove} onMouseLeave={() => { mouseX.set(0); mouseY.set(0); }}>
     <div className="hero-grid" /><div className="hero-bluewash" />
-    <motion.div className="hero-shape shape-orbit" style={{ x: springX, y: springY }}><div /><div /></motion.div>
-    <motion.div className="hero-shape shape-cube" style={{ x: springX, y: springY }}><i /><i /><i /><i /><i /><i /></motion.div>
+    <motion.div className="hero-shape shape-orbit" style={{ x: springX, y: springY }}><div /><div /><div className="absolute inset-0 flex items-center justify-center"><SparkMonogram size={180} /></div></motion.div>
     <motion.div className="hero-shape shape-disc" style={{ x: springX, y: springY }} />
     <div className="hero-content">
       <motion.div className="hero-kicker" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.35, duration: .7 }}><span className="live-dot" /> INDEPENDENT CREATIVE PARTNER <span className="kicker-rule" /> AVAILABLE FOR SELECT PROJECTS</motion.div>
@@ -117,10 +117,11 @@ export function MagneticLink({ href, children, className = "" }: { href: string;
 }
 
 export function Footer() {
-  return <footer className="footer" id="contact"><div className="footer-glow" />
+  const year = new Date().getFullYear();
+  return <footer className="footer" id="footer"><div className="footer-glow" />
     <div className="footer-top"><span className="section-label">[ 05 / LET’S BUILD ]</span><span className="footer-availability"><span className="live-dot" /> OPEN FOR NEW PROJECTS</span></div>
-    <div className="footer-main" data-reveal><p>HAVE A GOOD ONE IN MIND?</p><a className="footer-cta" href={`mailto:${email}`}>LET’S MAKE<br /><em>IT MATTER.</em><ArrowUpRight className="footer-arrow" /></a><a className="footer-email" href={`mailto:${email}`}>{email} <MoveUpRight size={14} /></a></div>
-    <div className="footer-bottom"><a className="wordmark footer-wordmark" href="#top"><BrandImage /><span>KHADIJAH<span className="lime">.</span></span></a><span>INDEPENDENT THINKING. DIGITAL IMPACT.</span><div className="footer-social"><a href={instagram} target="_blank" rel="noreferrer">INSTAGRAM <Instagram size={14} /></a><a href={`mailto:${email}`}>EMAIL <Mail size={14} /></a></div><a className="back-top" href="#top">BACK TO TOP <ArrowUpRight size={13} /></a></div>
+    <div className="footer-main" data-reveal><p>HAVE AN IDEA? LET’S MAKE IT HAPPEN.</p><a className="footer-cta" href={`mailto:${email}`}>LET’S MAKE<br /><em>IT MATTER.</em><ArrowUpRight className="footer-arrow" /></a><p className="footer-description">KHADIJAH.<br />Digital Marketer &amp; Creative Digital Strategist.</p><a className="footer-email" href={`mailto:${email}`}>{email} <MoveUpRight size={14} /></a></div>
+    <div className="footer-bottom"><a className="wordmark footer-wordmark" href="#top"><BrandImage /><span>KHADIJAH<span className="lime">.</span></span></a><nav className="footer-navigation" aria-label="Footer navigation"><a href="#about">ABOUT</a><a href="#expertise">EXPERTISE</a><a href="#work">WORK</a><a href="#contact">CONTACT</a></nav><span>© {year} KHADIJAH</span><div className="footer-social"><a href={instagram} target="_blank" rel="noreferrer" aria-label="Instagram profile"><Instagram size={14} /> @kdjah.vision</a><a href={`mailto:${email}`} aria-label="Email Khadijah"><Mail size={14} /> EMAIL</a></div><a className="back-top" href="#top">BACK TO TOP <ArrowUpRight size={13} /></a></div>
   </footer>;
 }
 

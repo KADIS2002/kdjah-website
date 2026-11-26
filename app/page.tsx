@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, ArrowUpRight, Code2, Megaphone, ShoppingBag, Sparkles, TrendingUp, WandSparkles } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight, ArrowUpRight, Code2, Instagram, Mail, Megaphone, ShoppingBag, Sparkles, TrendingUp, WandSparkles } from "lucide-react";
 import { CursorHint, Footer, Header, Hero, Loader, ScrollEffects } from "./components/motion";
 
 const services = [
@@ -23,7 +24,7 @@ function About() {
     <SectionIntro index="01" label="ABOUT ME" title={<>MORE THAN MARKETING.<br />I BUILD DIGITAL</>} accent="EXPERIENCES." />
     <div className="about-grid">
       <div className="portrait-column" data-reveal>
-        <div className="portrait-frame"><div className="portrait-grid" /><div className="portrait-orbit portrait-orbit-a" /><div className="portrait-orbit portrait-orbit-b" /><div className="portrait-center"><span>K</span><i>PORTRAIT<br />PLACEHOLDER</i></div><span className="portrait-corner corner-tl" /><span className="portrait-corner corner-br" /><span className="portrait-label">KHADIJAH / DIGITAL CREATIVE</span></div>
+        <div className="portrait-frame"><Image src="/images/222_darker_bg.jpg" alt="Khadijah, digital marketer and creative strategist" fill priority sizes="(max-width: 720px) 86vw, 380px" className="portrait-photo" /><div className="portrait-grid" /><span className="portrait-corner corner-tl" /><span className="portrait-corner corner-br" /><span className="portrait-label">KHADIJAH / DIGITAL CREATIVE</span></div>
         <div className="portrait-note"><span>BASED IN</span><span>PAKISTAN <i>↗</i> WORKING EVERYWHERE</span></div>
       </div>
       <div className="about-copy" data-reveal>
@@ -70,7 +71,7 @@ function Approach() {
 }
 
 function ContactStrip() {
-  return <section className="contact-strip"><div className="contact-strip-grid" /><span className="contact-strip-label">GOOD IDEAS DESERVE<br />A GOOD FIRST STEP.</span><a href="mailto:khadijahpk2002@gmail.com">LET’S TALK <ArrowUpRight size={20} /></a><span className="contact-strip-glow" /></section>;
+  return <section className="contact-strip" id="contact" aria-labelledby="contact-heading"><div className="contact-strip-grid" /><div className="contact-strip-copy"><span className="contact-strip-label">[ READY WHEN YOU ARE ]</span><h2 id="contact-heading">HAVE AN IDEA? LET’S MAKE IT HAPPEN.</h2><div className="contact-details"><a href="mailto:khadijahpk2002@gmail.com"><Mail size={15} /> khadijahpk2002@gmail.com</a><a href="https://www.instagram.com/kdjah.vision/" target="_blank" rel="noreferrer"><Instagram size={15} /> @kdjah.vision</a></div></div><a className="contact-email-cta" href="mailto:khadijahpk2002@gmail.com">EMAIL ME <ArrowUpRight size={20} /></a><span className="contact-strip-glow" /></section>;
 }
 
 export default function Home() {

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Khadijah — Digital Marketer, Creative Strategist & AI Web Developer",
   description:
     "Khadijah helps brands grow, connect, and stand out through strategic marketing, creative design, and powerful digital experiences.",
-  icons: { icon: "/images/logo.png", apple: "/images/logo.png" },
+  icons: { icon: "/images/Logo.png", apple: "/images/Logo.png" },
   openGraph: {
     title: "Khadijah — Digital experiences with impact",
     description: "Digital marketing, creative strategy, and AI web development.",
