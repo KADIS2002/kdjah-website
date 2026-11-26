@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useMotionValue, useSpring } from "framer-motion";
 import { ArrowDown, ArrowDownRight, ArrowUpRight, Instagram, Mail, Menu, MoveUpRight, X } from "lucide-react";
 import { BrandImage } from "./brand-image";
-import SparkMonogram from "../../components/SparkMonogram";
+import OrbitScene from "../../components/OrbitScene";
 
 const email = "khadijahpk2002@gmail.com";
 const instagram = "https://www.instagram.com/kdjah.vision/";
@@ -65,8 +65,7 @@ export function Hero() {
   };
   return <section ref={ref} className="hero" id="top" onMouseMove={onMove} onMouseLeave={() => { mouseX.set(0); mouseY.set(0); }}>
     <div className="hero-grid" /><div className="hero-bluewash" />
-    <motion.div className="hero-shape shape-orbit" style={{ x: springX, y: springY }}><div /><div /><div className="absolute inset-0 flex items-center justify-center"><SparkMonogram size={180} /></div></motion.div>
-    <motion.div className="hero-shape shape-disc" style={{ x: springX, y: springY }} />
+    <OrbitScene />
     <div className="hero-content">
       <motion.div className="hero-kicker" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.35, duration: .7 }}><span className="live-dot" /> INDEPENDENT CREATIVE PARTNER <span className="kicker-rule" /> AVAILABLE FOR SELECT PROJECTS</motion.div>
       <h1 aria-label="Hey, I'm Khadijah. I turn ideas into digital impact.">

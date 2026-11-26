@@ -14,3 +14,33 @@
 .portrait-photo{object-fit:cover;object-position:center 27%;filter:saturate(.82);}.wordmark .brand-image{width:58px;height:58px}.loader-logo{width:60px;height:60px}.footer-wordmark .brand-image{width:52px;height:52px}
 @keyframes brand-reveal{from{opacity:0;transform:translateY(5px) scale(.94)}to{opacity:1;transform:translateY(0) scale(1)}}
 @media(max-width:720px){.hero-brand-mark{right:9%;top:16%;width:45px;height:45px;opacity:.55!important}.contact-strip{align-items:flex-start;flex-direction:column;gap:16px;padding:23px 6%;min-height:0}.contact-strip-copy h2{font-size:20px;max-width:330px}.contact-details{gap:10px 14px}.contact-details a{font-size:8px}.contact-email-cta{height:40px!important}.footer-navigation{grid-row:2;grid-column:2;gap:9px;align-self:center}.footer-navigation a{font-size:6px}.footer-bottom>span{grid-row:3;grid-column:1;font-size:6px}.footer-social{grid-row:1;grid-column:2;gap:10px}.footer-social a{font-size:0}.footer-social svg{width:13px}}
+
+/* OrbitScene uses the pre-layout hero position while its contents orbit on shared rings. */
+.orbit-scene{position:absolute;z-index:2;pointer-events:none;right:15%;top:27%;width:min(36vw,430px);height:min(36vw,430px);aspect-ratio:1;overflow:visible}
+.orbit-ring{position:absolute;inset:0;margin:auto;width:var(--ring-size);height:var(--ring-size);border:1px solid;border-radius:50%;overflow:visible}
+.orbit-ring-outer{--ring-size:100%;border-color:rgba(92,144,232,.23)}
+.orbit-ring-middle{--ring-size:80%;border-color:rgba(92,144,232,.15)}
+.orbit-ring-inner{--ring-size:52%;border-color:rgba(212,255,36,.23)}
+.orbit-arm{position:absolute;inset:0;margin:auto;width:var(--orbit-size);height:var(--orbit-size);transform-origin:50% 50%;transform:rotate(var(--rest-angle));overflow:visible}
+.orbit-marker{position:absolute;top:0;left:50%;transform:translate(-50%,-50%);display:flex;align-items:center;justify-content:center;overflow:visible}
+.orbit-counter{display:grid;place-items:center;width:max-content;height:max-content;transform:rotate(var(--counter-angle));transform-origin:50% 50%;overflow:visible}
+.orbit-marker-spark,.orbit-counter-spark{width:200px;height:200px}
+.orbit-dot{display:block;border-radius:50%;flex:none}
+.orbit-dot-lime-large{width:13px;height:13px;background:var(--lime);box-shadow:0 0 22px rgba(212,255,36,.6)}
+.orbit-dot-lime-small{width:7px;height:7px;background:var(--lime);box-shadow:0 0 14px rgba(212,255,36,.6)}
+.orbit-dot-blue-small{width:6px;height:6px;background:#7eb1ff;box-shadow:0 0 14px rgba(21,88,201,.6)}
+.orbit-arm-spark{--orbit-size:80%;--orbit-duration:40s;--orbit-delay:-4s;--rest-angle:36deg;--counter-angle:-36deg}
+.orbit-arm-lime-outer{--orbit-size:100%;--orbit-duration:28s;--orbit-delay:-2s;--rest-angle:25deg;--counter-angle:-25deg}
+.orbit-arm-lime-inner{--orbit-size:52%;--orbit-duration:18s;--orbit-delay:-5s;--rest-angle:-95deg;--counter-angle:95deg}
+.orbit-arm-lime-small{--orbit-size:80%;--orbit-duration:22s;--orbit-delay:-8s;--rest-angle:115deg;--counter-angle:-115deg}
+.orbit-arm-blue-small{--orbit-size:100%;--orbit-duration:34s;--orbit-delay:-14s;--rest-angle:205deg;--counter-angle:-205deg}
+@keyframes orbit-cw{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@keyframes orbit-ccw{from{transform:rotate(0deg)}to{transform:rotate(-360deg)}}
+@keyframes counter-spin{from{transform:rotate(360deg)}to{transform:rotate(0deg)}}
+@media(prefers-reduced-motion:no-preference){
+  .orbit-arm-spark,.orbit-arm-lime-outer,.orbit-arm-lime-small{animation:orbit-cw var(--orbit-duration) linear infinite var(--orbit-delay);will-change:transform}
+  .orbit-arm-lime-inner,.orbit-arm-blue-small{animation:orbit-ccw var(--orbit-duration) linear infinite var(--orbit-delay);will-change:transform}
+  .orbit-counter{animation:counter-spin var(--orbit-duration) linear infinite var(--orbit-delay);will-change:transform}
+}
+@media(max-width:1050px){.orbit-scene{right:9%;width:36vw;height:36vw}}
+@media(max-width:720px){.orbit-scene{width:72vw;height:72vw;right:-14%;top:15%;opacity:.58}}

@@ -18,19 +18,9 @@
   0%, 100% { opacity: 0.45; }
   50% { opacity: 0.2; }
 }
-@keyframes dot-orbit {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
 @media (prefers-reduced-motion: no-preference) {
   .animated .spark { animation: spark-pulse 4s ease-in-out infinite; }
   .animated .glow { animation: glow-pulse 4s ease-in-out infinite; }
-  .animated .orbit {
-    transform-box: view-box;
-    transform-origin: 100px 100px;
-    animation: dot-orbit 12s linear infinite;
-  }
 }
 
 @media (max-width: 767px) {
