@@ -70,7 +70,7 @@ function Approach() {
 }
 
 function ContactStrip() {
-  return <section className="contact-strip" id="contact" aria-labelledby="contact-heading"><div className="contact-strip-grid" /><div className="contact-strip-copy"><span className="contact-strip-label">[ READY WHEN YOU ARE ]</span><h2 id="contact-heading">HAVE AN IDEA? LET’S MAKE IT HAPPEN.</h2><div className="contact-details"><a href="mailto:khadijahpk20002@gmail.com"><Mail size={15} /> khadijahpk20002@gmail.com</a><a href="https://www.instagram.com/kdjah.vision/" target="_blank" rel="noreferrer"><Instagram size={15} /> @kdjah.vision</a></div></div><a className="contact-email-cta" href="mailto:khadijahpk20002@gmail.com">EMAIL ME <ArrowUpRight size={20} /></a><span className="contact-strip-glow" /></section>;
+  return <section className="contact-strip" id="contact" aria-labelledby="contact-heading"><div className="contact-strip-grid" /><div className="contact-strip-copy"><span className="contact-strip-label">[ READY WHEN YOU ARE ]</span><h2 id="contact-heading">HAVE AN IDEA? LET’S MAKE IT HAPPEN.</h2><div className="contact-details"><a href="mailto:khadijahpk20002@gmail.com"><Mail size={15} /> khadijahpk20002@gmail.com</a><a href="https://www.instagram.com/kdjah.vision/" target="_blank" rel="noreferrer"><Instagram size={15} /> @kdjah.vision</a></div></div><a className="contact-email-cta" href="https://wa.me/918714208395?text=Hi%20Khadijah%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20talk." target="_blank" rel="noopener noreferrer" aria-label="Chat with me on WhatsApp">WHATSAPP ME <ArrowUpRight size={20} /></a><span className="contact-strip-glow" /></section>;
 }
 
 export default function Home() {
