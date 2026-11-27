@@ -25,7 +25,7 @@ function About() {
     <div className="about-grid">
       <div className="portrait-column" data-reveal>
         <div className="portrait-frame"><Image src="/images/222_darker_bg.jpg" alt="Khadijah, digital marketer and creative strategist" fill priority sizes="(max-width: 720px) 86vw, 380px" className="portrait-photo" /><div className="portrait-grid" /><span className="portrait-corner corner-tl" /><span className="portrait-corner corner-br" /><span className="portrait-label">KHADIJAH / DIGITAL CREATIVE</span></div>
-        <div className="portrait-note"><span>BASED IN</span><span>PAKISTAN <i>↗</i> WORKING EVERYWHERE</span></div>
+        <div className="portrait-note"><span>BASED IN</span><span>INDIA <i>↗</i> WORKING EVERYWHERE</span></div>
       </div>
       <div className="about-copy" data-reveal>
         <p className="about-lead">I’m Khadijah, a digital marketer passionate about helping businesses build a strong digital presence.</p>
