@@ -108,3 +108,14 @@
 .work-two .work-card-info h3,.work-two .work-card-summary{width:100%}
 @media(max-width:720px){.work-two .social-post-grid{padding:64px 24px 80px;gap:10px}}
 
+.hero-kicker{letter-spacing:.17em}
+.hero-overline{letter-spacing:.24em}
+.hero-coordinate,.hero-edge{letter-spacing:.16em}
+.section-label{letter-spacing:.19em}
+.mobile-menu .eyebrow{letter-spacing:.20em}
+.about-capabilities>span,.about-capabilities>div>span,.portrait-note,.portrait-label,.about-signoff,.service-top,.work-art-type,.work-art-mark,.work-card-info>span,.footer-availability,.contact-strip-label{letter-spacing:.16em}
+.work-heading>p span{letter-spacing:.14em}
+.footer-main>p:first-child{letter-spacing:.16em}
+.case-stat-grid span,.case-study-metrics dt,.case-study-detail>p strong{letter-spacing:.17em}
+@media(max-width:720px){.hero-kicker{letter-spacing:.13em}}
+
