@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true, "max-image-preview": "large" },
   },
-  icons: { icon: "/images/Logo.png", apple: "/images/Logo.png" },
+  icons: { icon: "/images/khadijah-logo-420.png", apple: "/images/khadijah-logo-420.png" },
   openGraph: {
     title: "Best Digital Marketer in Kerala | Khadijah",
     description:

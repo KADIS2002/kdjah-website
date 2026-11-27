@@ -5,11 +5,11 @@ type BrandImageProps = { className?: string; alt?: string };
 export function BrandImage({ className = "", alt = "Khadijah personal logo" }: BrandImageProps) {
   return (
     <Image
-      src="/images/Logo.png"
+      src="/images/khadijah-logo-420.png"
       alt={alt}
-      width={2000}
-      height={2000}
-      sizes="60px"
+      width={420}
+      height={420}
+      sizes="38px"
       className={`brand-image ${className}`}
     />
   );
