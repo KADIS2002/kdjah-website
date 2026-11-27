@@ -6,7 +6,7 @@ import { ArrowDown, ArrowDownRight, ArrowUpRight, Instagram, Mail, Menu, MoveUpR
 import { BrandImage } from "./brand-image";
 import OrbitScene from "../../components/OrbitScene";
 
-const email = "khadijahpk2002@gmail.com";
+const email = "khadijahpk20002@gmail.com";
 const instagram = "https://www.instagram.com/kdjah.vision/";
 
 export function Loader() {
