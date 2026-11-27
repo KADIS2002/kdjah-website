@@ -1,16 +1,13 @@
-"use client";
-
-import { motion } from "framer-motion";
 import Image from "next/image";
 import { ArrowRight, ArrowUpRight, Code2, Instagram, Mail, Megaphone, ShoppingBag, Sparkles, TrendingUp, WandSparkles } from "lucide-react";
 import { CursorHint, Footer, Header, Hero, Loader, ScrollEffects } from "./components/motion";
 
 const services = [
-  { id: "01", icon: Megaphone, title: "SOCIAL MEDIA\nMARKETING", description: "Build a sharper presence and make every post feel like it belongs.", list: ["Social media strategy", "Content planning", "Brand positioning", "Audience engagement"], color: "blue" },
-  { id: "02", icon: Code2, title: "AI WEB\nDEVELOPMENT", description: "Turn an ambitious idea into a thoughtful, responsive digital home.", list: ["AI-assisted development", "Responsive web design", "Landing pages", "Modern user experiences"], color: "lime" },
-  { id: "03", icon: ShoppingBag, title: "E-COMMERCE\nEXPERIENCES", description: "Make the path from first look to checkout feel effortless.", list: ["E-commerce development", "Online store strategy", "Product presentation", "Conversion-focused UX"], color: "violet" },
-  { id: "04", icon: TrendingUp, title: "GOOGLE ADS\n& PERFORMANCE", description: "Put the right message in front of the people already looking.", list: ["Search campaigns", "Display advertising", "Campaign optimization", "Performance tracking"], color: "blue" },
-  { id: "05", icon: WandSparkles, title: "CREATIVE\nSTRATEGY", description: "Connect the big idea to the details people actually experience.", list: ["Campaign concepts", "Creative direction", "Brand storytelling", "Digital experiences"], color: "lime" },
+  { id: "01", icon: Megaphone, title: "SOCIAL MEDIA\nMARKETING", description: "Social media marketing and content strategy to help brands reach and engage the right audience.", list: ["Social media strategy", "Meta Ads campaign management", "Content strategy", "Audience engagement"], color: "blue" },
+  { id: "02", icon: Code2, title: "AI WEB\nDEVELOPMENT", description: "Build a responsive website or landing page with thoughtful, AI-assisted development.", list: ["AI website development", "Responsive web design", "Landing pages", "Modern user experiences"], color: "lime" },
+  { id: "03", icon: ShoppingBag, title: "E-COMMERCE\nEXPERIENCES", description: "Create clear e-commerce journeys that make it easier for customers to explore and buy.", list: ["E-commerce development", "Online store strategy", "Product presentation", "Conversion-focused UX"], color: "violet" },
+  { id: "04", icon: TrendingUp, title: "GOOGLE ADS\n& PERFORMANCE", description: "Plan and manage Google Ads campaigns around your audience, offer, and business goals.", list: ["Google Ads management", "Search and display campaigns", "Campaign optimization", "Performance tracking"], color: "blue" },
+  { id: "05", icon: WandSparkles, title: "CREATIVE\nSTRATEGY", description: "Connect the big idea to the details people actually experience, from SEO to campaign creative.", list: ["SEO and on-page content", "Marketing automation", "Campaign concepts", "Brand storytelling"], color: "lime" },
 ];
 
 const capabilities = ["STRATEGY", "PAID MEDIA", "CONTENT", "WEB DESIGN", "AI TOOLS", "E-COMMERCE"];
@@ -21,16 +18,16 @@ function SectionIntro({ index, label, title, accent }: { index: string; label: s
 
 function About() {
   return <section className="about-section section-wrap" id="about">
-    <SectionIntro index="01" label="ABOUT ME" title={<>MORE THAN MARKETING.<br />I BUILD DIGITAL</>} accent="EXPERIENCES." />
+    <SectionIntro index="01" label="ABOUT ME" title={<>DIGITAL MARKETING<br />FOR KERALA</>} accent="BUSINESSES." />
     <div className="about-grid">
       <div className="portrait-column" data-reveal>
-        <div className="portrait-frame"><Image src="/images/222_darker_bg.jpg" alt="Khadijah, digital marketer and creative strategist" fill priority sizes="(max-width: 720px) 86vw, 380px" className="portrait-photo" /><div className="portrait-grid" /><span className="portrait-corner corner-tl" /><span className="portrait-corner corner-br" /><span className="portrait-label">KHADIJAH / DIGITAL CREATIVE</span></div>
+        <div className="portrait-frame"><Image src="/images/khadijah-digital-marketer-kerala.jpg" alt="Khadijah, digital marketer serving Kerala, India" fill sizes="(max-width: 720px) 86vw, 380px" className="portrait-photo" /><div className="portrait-grid" /><span className="portrait-corner corner-tl" /><span className="portrait-corner corner-br" /><span className="portrait-label">KHADIJAH / DIGITAL CREATIVE</span></div>
         <div className="portrait-note"><span>BASED IN</span><span>INDIA <i>↗</i> WORKING EVERYWHERE</span></div>
       </div>
       <div className="about-copy" data-reveal>
-        <p className="about-lead">I’m Khadijah, a digital marketer passionate about helping businesses build a strong digital presence.</p>
-        <p>From developing marketing strategies and running performance-driven campaigns to building websites with AI-powered tools, I combine creativity, technology, and strategy to turn ideas into meaningful digital experiences.</p>
-        <p>I believe great marketing is not just about being seen. It’s about creating connections, building trust, and driving results.</p>
+        <p className="about-lead">I am Khadijah, a digital marketer serving businesses in Kerala, India with practical strategies for growing their online presence.</p>
+        <p>My work includes Google Ads, Meta Ads, SEO, social media and content strategy, AI website development, e-commerce, and marketing automation. I shape the mix around each business and its goals.</p>
+        <p>I believe effective digital marketing is more than visibility. It is about connecting with the right audience and making each digital experience useful.</p>
         <div className="about-signoff"><span className="signoff-line" /><span>STRATEGY WITH A HUMAN TOUCH.</span><Sparkles size={15} /></div>
       </div>
     </div>
@@ -41,13 +38,13 @@ function About() {
 function Expertise() {
   return <section className="expertise-section section-wrap" id="expertise">
     <div className="expertise-head"><SectionIntro index="02" label="WHAT I DO" title={<>CREATIVE THINKING.</>} accent="STRATEGIC EXECUTION." /><p className="expertise-aside" data-reveal>Curiosity first. Clear strategy always.<br />Built around what your brand needs next.</p></div>
-    <div className="service-grid">{services.map((service, index) => <motion.article className={`service-card ${service.color}`} key={service.id} data-reveal whileHover={{ y: -7, transition: { duration: .25 } }}>
+    <div className="service-grid">{services.map((service, index) => <article className={`service-card ${service.color}`} key={service.id} data-reveal>
       <div className="service-top"><span>{service.id} / 05</span><service.icon size={22} strokeWidth={1.5} /></div>
       <div className="service-graphic"><div className="service-graphic-orbit" /><div className="service-graphic-core"><service.icon size={29} strokeWidth={1.2} /></div><span className="graphic-cross cross-a">+</span><span className="graphic-cross cross-b">+</span></div>
       <h3>{service.title.split("\n").map((line) => <span key={line}>{line}</span>)}</h3><p>{service.description}</p>
       <ul>{service.list.map((item) => <li key={item}><span className="list-dash" />{item}</li>)}</ul>
       <span className="service-card-index">0{index + 1}</span>
-    </motion.article>)}</div>
+    </article>)}</div>
   </section>;
 }
 

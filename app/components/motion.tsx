@@ -18,14 +18,14 @@ export function Loader() {
     const timer = window.setTimeout(() => {
       setShow(false);
       sessionStorage.setItem("khadijah-intro", "1");
-    }, 1250);
+    }, 600);
     return () => window.clearTimeout(timer);
   }, []);
   return (
     <AnimatePresence>
-      {show && <motion.div className="loader" initial={{ y: 0 }} animate={{ y: 0 }} exit={{ y: "-100%", transition: { duration: 0.7, ease: [0.76, 0, 0.24, 1] } }}>
+      {show && <motion.div className="loader" initial={{ y: 0 }} animate={{ y: 0 }} exit={{ y: "-100%", transition: { duration: 0.45, ease: [0.76, 0, 0.24, 1] } }}>
         <div className="loader-brand"><BrandImage className="loader-logo" alt="Khadijah logo" /><span>KHADIJAH<span className="lime">.</span></span></div>
-        <div className="loader-track"><motion.span initial={{ scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ duration: 1, ease: "easeInOut" }} /></div>
+        <div className="loader-track"><motion.span initial={{ scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ duration: 0.6, ease: "easeInOut" }} /></div>
         <span className="loader-caption">DIGITAL EXPERIENCES WITH IMPACT</span>
       </motion.div>}
     </AnimatePresence>

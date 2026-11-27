@@ -44,3 +44,15 @@
 }
 @media(max-width:1050px){.orbit-scene{right:9%;width:36vw;height:36vw}}
 @media(max-width:720px){.orbit-scene{width:72vw;height:72vw;right:-14%;top:15%;opacity:.58}}
+/* Spark styles are global to avoid an extra render-blocking CSS module request. */
+.sparkMonogram{display:block;flex:none;width:var(--spark-size,220px);height:var(--spark-size,220px);overflow:visible}
+.sparkMonogram-glow{fill:#6a9bf0;opacity:.35;filter:blur(15px)}
+.sparkMonogram-shape{transform-box:fill-box;transform-origin:center}
+.sparkMonogram-limeDot{fill:var(--lime,#d4ff1f);filter:drop-shadow(0 0 5px var(--lime,#d4ff1f))}
+@keyframes spark-pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+@keyframes glow-pulse{0%,100%{opacity:.45}50%{opacity:.2}}
+@media(prefers-reduced-motion:no-preference){.sparkMonogram-animated .sparkMonogram-shape{animation:spark-pulse 4s ease-in-out infinite}.sparkMonogram-animated .sparkMonogram-glow{animation:glow-pulse 4s ease-in-out infinite}}
+@media(max-width:767px){.sparkMonogram{width:min(var(--spark-size,220px),140px);height:min(var(--spark-size,220px),140px)}}
+.service-card{transition:transform .25s,border-color .3s,background .3s}.service-card:hover{transform:translateY(-7px)}
+.footer-bottom>span{color:#a5a6ae}
+@keyframes dot-pulse{0%,100%{transform:scale(1);opacity:.9}50%{transform:scale(1.25);opacity:.62}}
